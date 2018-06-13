@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>project3</title><link href=/static/css/app.a3953750f3accc2dbfcbf727e57d6a8c.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.366ec3c4a30326764051.js></script><script type=text/javascript src=/static/js/app.f2a09658b28ae625064e.js></script></body></html><script type=text/javascript>(function (doc, win) {
+        var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+        var clientWidth = docEl.clientWidth;
+        if (!clientWidth) return;
+        // 默认设计图为640的情况下1rem=100px；根据自己需求修改
+        if(clientWidth>=750){
+        docEl.style.fontSize = '100px';
+        }else{
+        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+        }
+        };
+         
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);</script>
